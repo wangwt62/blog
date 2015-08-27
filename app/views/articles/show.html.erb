@@ -1,0 +1,13 @@
+<h1>Article</h1>
+<%= render 'menu' %>
+<p>
+	<strong>Title: </strong><%= @article.title %><br/>
+	<strong>Content: </strong>
+	<%= @article.content %>
+</p>
+<% if @article.comments.count > 0 %>
+	<h2>Comments:</h2>
+	<%= render @article.comments %>
+<% end %>
+<h2>Add a Comment:</h2>
+<%= render "comments/form" %>
